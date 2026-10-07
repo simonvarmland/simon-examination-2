@@ -1,5 +1,7 @@
 # simon-examination-2
 
+[Se videoredovisningen i Teams](https://teams.microsoft.com/l/meetingrecap?driveId=b%21xKchYi_QTk-s2BVxb-e-uH0JVTCXWztPimjavu4mVMsbcvJlKqCKRpBmf3x8OwqG&driveItemId=01FMONKRSDUHBNH2KAMNFLEWZU2OUWFKZ6&sitePath=https%3A%2F%2Ffunet.sharepoint.com%2Fsites%2FMjukvaruutvecklareYhdistans%2FDelade+dokument%2FGeneral%2FRecordings%2FM%C3%B6te+i+General-20261007_180831-M%C3%B6tesinspelning.mp4%3Fweb%3D1&fileUrl=https%3A%2F%2Ffunet.sharepoint.com%2Fsites%2FMjukvaruutvecklareYhdistans%2FDelade+dokument%2FGeneral%2FRecordings%2FM%C3%B6te+i+General-20261007_180831-M%C3%B6tesinspelning.mp4%3Fweb%3D1&threadId=19%3A-jSADGv4Q0CxSKWLeIEv6p7z_xpTDBxYL8AX46AG0ac1%40thread.tacv2&organizerId=54e21c37-34d2-41da-9be4-989c9532bb33&tenantId=a4d3b9bf-2082-4eee-ab79-fd407faef1e5&callId=cb8a2c16-5bcb-47a9-bcc7-a9b85fedb288&threadType=space&meetingType=MeetNow&organizerGroupId=b4fc5d66-9d44-492e-bd7d-806ae3068bcb&channelType=Standard&replyChainId=1791389229901&subType=RecapSharingLink_RecapCore&recapType=Recording)
+
 ## 1. Frågor om koden
 
 ### State-hantering
