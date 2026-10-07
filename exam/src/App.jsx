@@ -1,8 +1,10 @@
-import { useState } from "react"
-import "./App.css"
+import { useState } from "react";
+import "./App.css";
+import TodoForm from "./TodoForm";
+import TodoItem from "./TodoItem";
 
 function App() {
-  const [todo, setTodo] = useState([
+  const [todos, setTodos] = useState([
     { id: 1, text: "Handla", done: false },
     { id: 2, text: "Tvätta", done: false },
     { id: 3, text: "Städa", done: false },
@@ -10,47 +12,71 @@ function App() {
 
   const [draft, setDraft] = useState("");
 
-  function handleAdd(e) {
+  function handleAdd() {
     const text = draft.trim();
-    
+
     if (text === "") {
       return;
     }
 
-    setTodo([...todo, { id: Date.now(), text: text, done: false }]);
+    setTodos([
+      ...todos,
+      { id: Date.now(), text: text, done: false },
+    ]);
+
     setDraft("");
   }
 
-  function handleChange(e){
+  function handleChange(e) {
     setDraft(e.target.value);
   }
 
   function handleRemove(id) {
-    const newList = todo.filter((todo) => todo.id !== id);
+    setTodos(
+      todos.filter((todo) => todo.id !== id)
+    );
+  }
 
-    setTodo(newList);
+  function handleToggle(id) {
+    setTodos(
+      todos.map((todo) =>
+        todo.id === id
+          ? { ...todo, done: !todo.done }
+          : todo
+      )
+    );
   }
 
   return (
+    <main className="app">
+      <section className="todo-card">
 
-    <main>
-        <h1>Todo</h1>
-        <input
-        value={draft}
-        onChange={handleChange} 
-        placeholder="Skriv här"></input>
-        <button type="button"
-        onClick={handleAdd}
-        >Lägg till</button>
+        <img
+          className="logo"
+          src="/img/bocka-av-logo.png"
+          alt="Bocka av"
+        />
+
+        <TodoForm
+          draft={draft}
+          onChange={handleChange}
+          onAdd={handleAdd}
+        />
+
         <ul>
-          {todo.map((todo) => (<li key={todo.id} className={todo.done ? "todo done-todo" : "todo"} ><input type="checkbox" />{todo.text} <button type="button"
-        onClick={() => handleRemove(todo.id)}
-        >Ta bort</button></li>))}
+          {todos.map((todo) => (
+            <TodoItem
+              key={todo.id}
+              todo={todo}
+              onToggle={handleToggle}
+              onRemove={handleRemove}
+            />
+          ))}
         </ul>
-      
+
+      </section>
     </main>
   );
-
 }
 
-export default App
+export default App;
